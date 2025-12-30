@@ -10,32 +10,29 @@ export const siteConfig: SiteConfig = {
 	subtitle: "Thinking, then recording.",
 	site_url: "https://sJJays.github.io",
 	description:
-		"Firefly 是一款基于 Astro 框架和 Fuwari 模板开发的清新美观且现代化个人博客主题模板，专为技术爱好者和内容创作者设计。该主题融合了现代 Web 技术栈，提供了丰富的功能模块和高度可定制的界面，让您能够轻松打造出专业且美观的个人博客网站。",
+		"一名嵌入式底层驱动工程师的个人网站,用于记录我在学习和思考过程中遇到的各种知识点和心得体会.",
 	keywords: [
-		"Firefly",
-		"Fuwari",
-		"Astro",
-		"ACGN",
-		"博客",
-		"技术博客",
-		"静态博客",
+		"嵌入式技术博客",
+		"Linux内核驱动",
+		"底层软件工程师",
+		"相机驱动",
 	],
 
 	lang: SITE_LANG,
 
 	themeColor: {
-		hue: 165, // 主题色的默认色相，范围从 0 到 360。例如：红色：0，青色：200，蓝绿色：250，粉色：345
+		hue: 260, // 主题色的默认色相，范围从 0 到 360。例如：红色：0，青色：200，蓝绿色：250，粉色：345
 		fixed: false, // 对访问者隐藏主题色选择器
 		defaultMode: "system", // 默认模式："light" 亮色，"dark" 暗色，"system" 跟随系统
 	},
 
 	favicon: [
 		// 留空以使用默认 favicon
-		{
-			src: "/assets/images/favicon.ico", // 图标文件路径
-			theme: "light", // 可选，指定主题 'light' | 'dark'
-			sizes: "32x32", // 可选，图标大小
-		},
+		// {
+		// 	src: "/assets/images/favicon.ico", // 图标文件路径
+		// 	theme: "light", // 可选，指定主题 'light' | 'dark'
+		// 	sizes: "32x32", // 可选，图标大小
+		// },
 	],
 
 	// 导航栏Logo
@@ -44,15 +41,15 @@ export const siteConfig: SiteConfig = {
 	// { type: "image", value: "/assets/images/logo.webp", alt: "Firefly Logo" }
 	// { type: "image", value: "https://example.com/logo.png", alt: "Firefly Logo" }
 	navbarLogo: {
-		type: "image",
-		value: "/assets/images/LiuYingPure3.svg",
-		alt: "🍀",
+		type: "icon",
+		value: "material-symbols:home-outline-rounded",
+		// alt: "🍀",
 	},
-	navbarTitle: "Firefly", // 导航栏标题，可以设置为与 title 不同的值，如果不设置则使用 title
+	navbarTitle: "sJJay's Blog", // 导航栏标题，可以设置为与 title 不同的值，如果不设置则使用 title
 	navbarWidthFull: false, // 全宽导航栏，导航栏是否占满屏幕宽度，true：占满，false：不占满
 
 	// 站点开始日期，用于统计运行天数
-	siteStartDate: "2025-01-01", // 请修改为你的站点实际开始日期，格式：YYYY-MM-DD
+	siteStartDate: "2025-12-30", // 请修改为你的站点实际开始日期，格式：YYYY-MM-DD
 
 	// bangumi配置
 	bangumi: {
@@ -73,7 +70,7 @@ export const siteConfig: SiteConfig = {
 	pages: {
 		sponsor: true, // 赞助页面开关
 		guestbook: true, // 留言板页面开关，需要配置评论系统
-		bangumi: true, // 番组计划页面开关，含追番和游戏，dev调试时只获取一页数据，build才会获取全部数据
+		bangumi: false, // 番组计划页面开关，含追番和游戏，dev调试时只获取一页数据，build才会获取全部数据
 	},
 
 	// 文章列表布局配置
@@ -106,9 +103,9 @@ export const siteConfig: SiteConfig = {
 		// 背景图片配置
 		src: {
 			// 桌面背景图片
-			desktop: "/assets/images/d1.webp",
+			desktop: "/assets/images/light.jpg",
 			// 移动背景图片
-			mobile: "/assets/images/m3.webp",
+			mobile: "/assets/images/light.jpg",
 		},
 
 		// Banner模式特有配置
@@ -120,17 +117,12 @@ export const siteConfig: SiteConfig = {
 
 			homeText: {
 				// 主页显示自定义文本（全局开关）
-				enable: true,
+				enable: false,
 				// 主页横幅主标题
 				title: "Lovely firefly!",
 				// 主页横幅副标题
 				subtitle: [
-					"In Reddened Chrysalis, I Once Rest",
-					"From Shattered Sky, I Free Fall",
-					"Amidst Silenced Stars, I Deep Sleep",
-					"Upon Lighted Fyrefly, I Soon Gaze",
-					"From Undreamt Night, I Thence Shine",
-					"In Finalized Morrow, I Full Bloom",
+					"Destiny willed it so.",
 				],
 				typewriter: {
 					//打字机开启 → 循环显示所有副标题
@@ -147,12 +139,12 @@ export const siteConfig: SiteConfig = {
 					mobile: true, // 移动端显示横幅图片来源文本
 				},
 				text: {
-					desktop: "Pixiv - 晚晚喵", // 桌面端要显示的来源文本
-					mobile: "Pixiv - KiraraShss", // 移动端要显示的来源文本
+					desktop: "sJJay", // 桌面端要显示的来源文本
+					mobile: "sJJay", // 移动端要显示的来源文本
 				},
 				url: {
-					desktop: "https://www.pixiv.net/artworks/135490046", // 桌面端原始艺术品或艺术家页面的 URL 链接
-					mobile: "https://www.pixiv.net/users/42715864", // 移动端原始艺术品或艺术家页面的 URL 链接
+					desktop: "https://github.com/sJJays", // 桌面端原始艺术品或艺术家页面的 URL 链接
+					mobile: "https://github.com/sJJays", // 移动端原始艺术品或艺术家页面的 URL 链接
 				},
 			},
 			navbar: {
@@ -161,8 +153,8 @@ export const siteConfig: SiteConfig = {
 			// 波浪动画效果配置，开启可能会影响页面性能，请根据实际情况开启
 			waves: {
 				enable: {
-					desktop: true, // 桌面端启用波浪动画效果
-					mobile: true, // 移动端启用波浪动画效果
+					desktop: false, // 桌面端启用波浪动画效果
+					mobile: false, // 移动端启用波浪动画效果
 				},
 				performance: {
 					quality: "high",

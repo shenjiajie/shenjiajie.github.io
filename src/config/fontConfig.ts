@@ -2,7 +2,7 @@
 export const fontConfig = {
 	enable: true, // 启用自定义字体功能
 	preload: true, // 预加载字体文件以提高性能
-	selected: ["system"], // 当前选择的字体，支持多个字体组合
+	selected: ["inter"], // 当前选择的字体，支持多个字体组合
 	fonts: {
 		// 系统字体
 		system: {
@@ -10,7 +10,7 @@ export const fontConfig = {
 			name: "系统字体",
 			src: "", // 系统字体无需 src
 			family:
-				"system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif",
+				"Roboto, sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI",
 		},
 		// Google Fonts - Zen Maru Gothic
 		"zen-maru-gothic": {
@@ -48,11 +48,11 @@ export const fontConfig = {
 		},
 	},
 	fallback: [
+		"Roboto",
+		"sans-serif",
 		"system-ui",
 		"-apple-system",
 		"BlinkMacSystemFont",
 		"Segoe UI",
-		"Roboto",
-		"sans-serif",
 	], // 全局字体回退
 };
